@@ -43,8 +43,11 @@
             </ul>
             <div class="nav-data-cycle">
                 <i class='bx bx-bar-chart-alt-2'></i>
+                <i class='bx bx-data'></i>
                 <i class='bx bx-pie-chart-alt-2'></i>
+                <i class='bx bx-table'></i>
                 <i class='bx bx-git-branch'></i>
+                <i class='bx bx-server'></i>
             </div>
         </div>
     </nav>
@@ -80,7 +83,7 @@
             <div class="skill-card glass" id="skill-sql">
                 <i class='bx bxs-data'></i>
                 <h3>SQL</h3>
-                <p>Data querying, manipulation, and robust database management</p>
+                <p>Data querying, Sub queries, manipulation, CTE, Window Functions and robust database management</p>
             </div>
             <div class="skill-card glass" id="skill-python">
                 <i class='bx bxl-python'></i>
@@ -109,6 +112,19 @@
                 <h3>Microsoft Azure</h3>
                 <p>Cloud infrastructure, data storage, and scalable enterprise analytics</p>
             </div>
+            <div class="skill-card glass" id="skill-spark">
+                <img class="svg-icon"
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg"
+                    alt="Apache Spark" />
+                <h3>Spark</h3>
+                <p>Distributed data processing engine for large-scale analytics</p>
+            </div>
+            <div class="skill-card glass" id="skill-ai">
+                <i class='bx bx-brain'></i>
+                <h3>AI</h3>
+                <p>Leveraging AI tools like Claude, GPT and more to automate analysis, generate insights, and accelerate
+                    data workflows</p>
+            </div>
         </div>
     </section>
 
@@ -118,7 +134,10 @@
 
         <!-- Looker Studio Dashboard Integration -->
         <div class="dashboard-wrapper glass fade-in-up">
-            <h3 class="dashboard-title">My Live Career Dashboard</h3>
+            <div class="dashboard-header">
+                <h3 class="dashboard-title">My Career Dashboard</h3>
+                <span class="live-badge"><span class="pulse-dot"></span> LIVE</span>
+            </div>
             <div class="dashboard-container">
                 <iframe
                     src="https://lookerstudio.google.com/embed/reporting/21e1666c-7785-40a9-a185-aa15ddfaf162/page/FrXtF"
@@ -184,7 +203,11 @@
     <section id="projects" class="projects section">
         <h2 class="section-title fade-in-up">Projects</h2>
         <div class="projects-grid fade-in-up">
-            <div class="project-card glass">
+            <div class="project-card glass"
+                data-star-situation="The executive team lacked a centralized view of regional sales efforts, leading to delayed decision-making and inefficient inventory distribution."
+                data-star-task="Design and implement a dynamic, automated PowerBI dashboard to analyze regional metrics, track goals versus actuals, and predict upcoming market trends."
+                data-star-action="Extracted raw sales data using SQL queries, performed data modeling in PowerBI, and created interactive visualizations featuring drill-down capabilities for granular regional insights."
+                data-star-result="Reduced reporting delays by 90%, enabling real-time inventory allocation decisions and contributing to a 15% increase in operational efficiency across regions.">
                 <div class="project-image"
                     style="background-image: url('https://github.com/NEXMK/Sales_Performance_Dashboard/raw/main/Sales%20Dashboard.png');">
                 </div>
@@ -193,41 +216,61 @@
                     <h3>Sales Performance</h3>
                     <p>Interactive dashboard analyzing regional sales metrics, predicting quarterly market trends, and
                         optimizing inventory allocations.</p>
-                    <a href="https://github.com/NEXMK/Sales_Performance_Dashboard/tree/main" class="project-link">View
-                        Project <i class='bx bx-right-arrow-alt'></i></a>
+                    <div class="project-links-row">
+                        <button class="btn btn-sm btn-primary project-modal-btn">View Project <i
+                                class='bx bx-book-content'></i></button>
+                        <a href="https://github.com/NEXMK/Sales_Performance_Dashboard/tree/main" class="project-link"
+                            target="_blank" rel="noopener noreferrer">View Repo <i class='bx bxl-github'></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="project-card glass">
+            <div class="project-card glass"
+                data-star-situation="The telecom company was experiencing an unexplained rise in customer churn during Q2 2022, but the raw data was too scattered to identify root causes."
+                data-star-task="Consolidate customer profiles and transaction data to clean, analyze, and visualize key performance metrics and identify factors leading to customer attrition."
+                data-star-action="Leveraged Excel Power Query to merge disparate datasets, applied advanced cleaning techniques, and built a comprehensive reporting dashboard utilizing Pivot Tables and dynamic charts."
+                data-star-result="Identified a 20% spike in churn tied to specific service offers, allowing the retention team to adjust their strategies and stabilize the customer base in Q3.">
                 <div class="project-image"
                     style="background-image: url('https://res.cloudinary.com/da8jicc6n/image/upload/v1774614610/dashboard1_dfwdgq.png');">
                 </div>
                 <div class="project-info">
                     <span class="project-tag">Excel Dashboard</span>
-                    <h3>Customer Analysis for Telecom Company</h3>
-                    <p>Interactive dashboard designed to analyze and visualize key business and customer metrics for a
-                        telecom company during Q2 2022. The project uses Excel for data cleaning , analysis and creating
-                        interactive and insightful dashboards. It focuses on customer behavior, performance metrics,
-                        churn analysis, and offer effectiveness.</p>
-                    <a href="https://github.com/NEXMK/Telecom-Company-Project" class="project-link">View Project <i
-                            class='bx bx-right-arrow-alt'></i></a>
+                    <h3>Telecom Customer Analysis</h3>
+                    <p>Interactive dashboard analyzing key business metrics, customer behavior, churn factors, and offer
+                        effectiveness for Q2 2022.</p>
+                    <div class="project-links-row">
+                        <button class="btn btn-sm btn-primary project-modal-btn">View Project <i
+                                class='bx bx-book-content'></i></button>
+                        <a href="https://github.com/NEXMK/Telecom-Company-Project" class="project-link" target="_blank"
+                            rel="noopener noreferrer">View Repo <i class='bx bxl-github'></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="project-card glass">
+            <div class="project-card glass"
+                data-star-situation="HR leadership struggled to track workforce demographics, employee turnover rates, and departmental performance effectively using static spreadsheets."
+                data-star-task="Develop an interactive HR analytics solution to transform scattered employee records into an accessible, single source of truth for decision-makers."
+                data-star-action="Wrote complex SQL queries to extract and stage employee data, subsequently designing an intuitive PowerBI dashboard focused on clarity, accessibility, and high-level KPIs."
+                data-star-result="Provided HR with instant visibility into demographics and turnover patterns, empowering them to launch targeted retention programs in critical departments.">
                 <div class="project-image"
                     style="background-image: url('https://res.cloudinary.com/da8jicc6n/image/upload/v1774614099/Dashboard_1_Employees_dbuecx.png');">
                 </div>
                 <div class="project-info">
                     <span class="project-tag">PowerBI & SQL</span>
-                    <h3>HR Data analytics Project</h3>
-                    <p> Interactive HR Analytics Dashboard built to provide key insights into workforce demographics and
-                        HR metrics for data-driven decision-making. The dashboards were developed using SQL for data
-                        cleaning and analysis, followed by Power BI for visualization and interactive insights. The
-                        design emphasizes clarity and accessibility.</p>
-                    <a href="https://github.com/NEXMK/HR_Data_Analysis_Project" class="project-link">View Project <i
-                            class='bx bx-right-arrow-alt'></i></a>
+                    <h3>HR Data Analytics</h3>
+                    <p>Interactive dashboard built to provide key insights into workforce demographics and HR metrics
+                        for data-driven decision-making.</p>
+                    <div class="project-links-row">
+                        <button class="btn btn-sm btn-primary project-modal-btn">View Project <i
+                                class='bx bx-book-content'></i></button>
+                        <a href="https://github.com/NEXMK/HR_Data_Analysis_Project" class="project-link" target="_blank"
+                            rel="noopener noreferrer">View Repo <i class='bx bxl-github'></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="project-card glass">
+            <div class="project-card glass"
+                data-star-situation="Finance managers relied on manual, error-prone data entry for tracking expenses, causing significant delays in month-end reporting."
+                data-star-task="Build an automated, robust financial model using Excel to streamline expense tracking and forecast quarterly revenue accurately."
+                data-star-action="Engineered a fully automated workbook containing sophisticated formulas, VBA macros for recurring tasks, and built-in error handling for seamless data ingestion."
+                data-star-result="Saved the finance team 15+ hours per month on manual reporting tasks while vastly improving the accuracy of forward-looking revenue projections.">
                 <div class="project-image"
                     style="background-image: url('https://images.unsplash.com/photo-1543286386-2e659306cd6c?auto=format&fit=crop&q=80&w=600');">
                 </div>
@@ -236,7 +279,12 @@
                     <h3>Revenue Forecasting Tracker</h3>
                     <p>Complex, fully automated Excel workbook utilizing advanced macros for reliable expense tracking
                         and quarterly revenue forecasting.</p>
-                    <a href="#" class="project-link">View Project <i class='bx bx-right-arrow-alt'></i></a>
+                    <div class="project-links-row">
+                        <button class="btn btn-sm btn-primary project-modal-btn">View Project <i
+                                class='bx bx-book-content'></i></button>
+                        <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">View Repo <i
+                                class='bx bxl-github'></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -275,10 +323,10 @@
         <p>&copy; <span id="year">2026</span> All rights reserved.</p>
     </footer>
 
-    <!-- About Me Modal -->
+    <!-- Old Version About Me Modal (Triggered by Photo) -->
     <div id="about-modal" class="modal">
         <div class="modal-content glass">
-            <span class="close-modal">&times;</span>
+            <span class="close-modal" title="Close">&times;</span>
             <div class="about-header">
                 <img src="https://res.cloudinary.com/da8jicc6n/image/upload/v1774622979/file_00000000e4a4720ab559183ee86e193e_dxtubj.png"
                     alt="Mohamed Shabasy" class="about-photo-small" title="Mohamed Shabasy">
@@ -296,6 +344,33 @@
         </div>
     </div>
 
+    <!-- SQL Terminal About Me Modal (Triggered by Button) -->
+    <div id="sql-about-modal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-modal" title="Close">&times;</span>
+            <div class="about-header">
+                <img src="https://res.cloudinary.com/da8jicc6n/image/upload/v1774622979/file_00000000e4a4720ab559183ee86e193e_dxtubj.png"
+                    alt="Mohamed Shabasy" class="about-photo-small" title="Mohamed Shabasy">
+                <h2>Terminal Console</h2>
+            </div>
+
+            <!-- SQL Terminal Embedded section -->
+            <div class="terminal-embedded">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="terminal-title">bash - shabasy@portfolio:~</div>
+                </div>
+                <div class="terminal-body" id="sql-terminal-body">
+                    <!-- Content injected via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Project Hover Modal -->
     <div id="project-hover-modal" class="modal hover-modal">
         <div class="modal-content glass">
@@ -303,6 +378,47 @@
                 <img id="hover-project-img" src="" alt="Project Preview">
                 <h3 id="hover-project-title"></h3>
                 <p id="hover-project-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Screen Case Study Modal -->
+    <div id="case-study-modal" class="modal fullscreen-modal">
+        <div class="modal-content glass case-study-content">
+            <button class="close-modal case-study-close">&times;</button>
+
+            <div class="case-study-header">
+                <div class="case-study-banner" id="cs-banner" style="background-image: url('');"></div>
+                <div class="case-study-title-wrapper">
+                    <span class="project-tag" id="cs-tag">Tag</span>
+                    <h2 id="cs-title">Project Title</h2>
+                </div>
+            </div>
+
+            <div class="case-study-body">
+                <div class="star-grid">
+                    <div class="star-section">
+                        <h4><i class='bx bx-target-lock text-emerald-400'></i> Situation</h4>
+                        <p id="cs-situation">Description of the situation...</p>
+                    </div>
+                    <div class="star-section">
+                        <h4><i class='bx bx-task text-blue-400'></i> Task</h4>
+                        <p id="cs-task">Description of the task...</p>
+                    </div>
+                    <div class="star-section">
+                        <h4><i class='bx bx-code-block text-purple-400'></i> Action</h4>
+                        <p id="cs-action">Description of the action...</p>
+                    </div>
+                    <div class="star-section">
+                        <h4><i class='bx bx-line-chart text-amber-400'></i> Result</h4>
+                        <p id="cs-result">Description of the result...</p>
+                    </div>
+                </div>
+
+                <div class="case-study-footer">
+                    <a href="#" id="cs-repo-link" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View
+                        Project Repository <i class='bx bxl-github'></i></a>
+                </div>
             </div>
         </div>
     </div>
