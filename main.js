@@ -420,4 +420,40 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Skill Cards Edge Glow Logic
+    const edgeGlowOverlay = document.getElementById('edge-glow-overlay');
+    const skillCards = document.querySelectorAll('.skill-card');
+    
+    const skillColors = {
+        'skill-sql': 'rgba(242, 145, 17, 0.7)',
+        'skill-python': 'rgba(55, 118, 171, 0.7)',
+        'skill-powerbi': 'rgba(242, 200, 17, 0.7)',
+        'skill-excel': 'rgba(33, 115, 70, 0.7)',
+        'skill-databricks': 'rgba(255, 54, 33, 0.7)',
+        'skill-azure': 'rgba(0, 120, 212, 0.7)',
+        'skill-spark': 'rgba(226, 90, 28, 0.7)',
+        'skill-ai': 'rgba(139, 92, 246, 0.7)'
+    };
+
+    if (edgeGlowOverlay && skillCards.length > 0) {
+        skillCards.forEach(card => {
+            const handleGlow = () => {
+                const color = skillColors[card.id] || 'rgba(59, 130, 246, 0.7)';
+                edgeGlowOverlay.style.setProperty('--glow-color', color);
+                edgeGlowOverlay.classList.add('active');
+            };
+
+            const removeGlow = () => {
+                edgeGlowOverlay.classList.remove('active');
+            };
+
+            card.addEventListener('mouseenter', handleGlow);
+            card.addEventListener('mouseleave', removeGlow);
+            
+            // For mobile touches
+            card.addEventListener('touchstart', handleGlow, { passive: true });
+            card.addEventListener('touchend', removeGlow, { passive: true });
+        });
+    }
 });
