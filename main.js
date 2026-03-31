@@ -424,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Skill Cards Edge Glow Logic
     const edgeGlowOverlay = document.getElementById('edge-glow-overlay');
     const skillCards = document.querySelectorAll('.skill-card');
-    
+
     const skillColors = {
         'skill-sql': 'rgba(242, 145, 17, 0.7)',
         'skill-python': 'rgba(55, 118, 171, 0.7)',
@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.addEventListener('mouseenter', handleGlow);
             card.addEventListener('mouseleave', removeGlow);
-            
+
             // For mobile touches
             card.addEventListener('touchstart', handleGlow, { passive: true });
             card.addEventListener('touchend', removeGlow, { passive: true });
